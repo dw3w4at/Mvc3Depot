@@ -14,10 +14,5 @@ namespace Mvc3Depot.Controllers
 
             return View();
         }
-
-        public ActionResult About()
-        {
-            return View();
-        }
     }
 }
