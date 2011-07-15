@@ -21,5 +21,7 @@ namespace Mvc3Depot.Models
         public decimal Price { get; set; }
         [Timestamp, ConcurrencyCheck]
         public byte[] Timestamp { get; set; }
+
+        public virtual ICollection<LineItem> LineItems { get; set; }
     }
 }

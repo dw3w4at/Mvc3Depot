@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Miskatonic Books Online Store</title>
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/Depot.css")" rel="stylesheet" type="text/css" />
+    @RenderSection("additionalCss", false)
+    <script src="@Url.Content("~/Scripts/jquery-1.6.2.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/modernizr-2.0.6-development-only.js")" type="text/javascript"></script>
+    @RenderSection("additionalJs", false)
+</head>
+<body>
+    <div class="page">
+        <header>
+            <div id="title">
+                <h1>@(ViewBag.Title ?? "Miskatonic Bookshelf")</h1>
+            </div>
+            <div id="logindisplay">
+                @Html.Partial("_LogOnPartial")
+            </div>
+            <nav>
+                <ul id="menu">
+                    <li>@Html.ActionLink("Miskatonic Bookshelf", "Index", "Home")</li>
+                </ul>
+            </nav>
+        </header>
+        <section id="side">
+            <nav id="cart">
+            @Html.Partial("_Cart", ViewBag.Cart as IEnumerable<Mvc3Depot.Models.LineItem>)
+            </nav>
+        </section>
+        <section id="main">
+            @RenderBody()
+        </section>
+    </div>
+</body>
+</html>

@@ -9,5 +9,7 @@ namespace Mvc3Depot.Models
     public class Mvc3DepotContext : DbContext
     {
         public DbSet<Product> Products { get; set; }
+
+        public DbSet<LineItem> LineItems { get; set; }
     }
 }

@@ -72,18 +72,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CartController.cs" />
+    <Compile Include="Controllers\ExtentionMethods.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\LineItem.cs" />
     <Compile Include="Models\Mvc3DepotContext.cs" />
     <Compile Include="Models\Mvc3DepotInitializer.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Depot.css" />
     <Content Include="Content\images\cela.png" />
     <Content Include="Content\images\necr.png" />
     <Content Include="Content\images\pnak.png" />
@@ -146,6 +150,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Global.asax" />
     <Content Include="README.jQuery.vsdoc.txt" />
+    <Content Include="Scripts\Depot.js" />
     <Content Include="Scripts\jquery-1.6.2-vsdoc.js" />
     <Content Include="Scripts\jquery-1.6.2.js" />
     <Content Include="Scripts\jquery-1.6.2.min.js" />
@@ -211,6 +216,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Code\DepotHelper.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_Cart.cshtml" />
+    <Content Include="Views\Shared\_DepotLayout.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

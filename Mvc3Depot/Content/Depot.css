@@ -1,0 +1,122 @@
+﻿tr.product_list:nth-child(odd) {
+  background-color: #f8b0f8;
+}
+
+tr.product_list:nth-child(even) {
+  background-color: #e0f8f8;
+}
+
+.list_description dt {
+  color:        #244;
+  font-weight:  bold;
+  font-size:    larger;
+}
+
+.list_description dd {
+        margin: 0;
+}
+
+.list_actions {
+  font-size:    x-small;
+  text-align:   right;
+  padding-left: 1em;
+}
+
+#main {
+  margin-left: 17em;
+  padding-top: 4ex;
+  padding-left: 2em;
+}
+
+#main #notice {
+        color: #000;
+        border: 2px solid red;
+        padding: 1em;
+        margin-bottom: 2em;
+        background-color: #f0f0f0;
+        font: bold smaller sans-serif;
+}
+
+#main h2 {
+        font:  150% sans-serif;
+        color: #226;
+        border-bottom: 3px dotted #77d;
+}
+
+#main .entry img {
+  width: 80px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  float: left;
+}
+
+#main .entry h3 {
+ margin-top: 0;
+ margin-bottom: 2px;
+ color: #227;
+}
+
+#main .entry p {
+ margin-top: 0.5em; 
+ margin-bottom: 0.8em; 
+}
+
+#main .entry .price_line {
+ clear: both;
+ margin-bottom: 0.5em;
+}
+
+#main .entry .add_to_cart {
+  position: relative;
+}
+
+#main .entry  .price {
+  color: #44a;
+  font-weight: bold;
+  margin-right: 2em;
+}
+
+#main .entry form, #store .entry form div {
+  display: inline;
+}
+
+#main .cart_title {
+  font: 120% bold;
+}
+
+#main .item_price, #main .total_line {
+  text-align: right;
+}
+
+#main .total_line .total_cell {
+  font-weight: bold;
+  border-top: 1px solid #595;
+}
+
+#side {
+  float: left;
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-bottom: 1em;
+  width: 16em;
+}
+
+#side a {
+  color: #bfb;
+  font-size: small;
+}
+
+#cart, #cart table {
+  font-size: smaller;
+  color: white;
+}
+
+#cart table {
+  border-top:    1px dotted #595;
+  border-bottom: 1px dotted #595;
+  margin-bottom: 10px;
+}
+
+#current_item {
+    background-color: #5c87b2;
+}

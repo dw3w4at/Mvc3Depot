@@ -1,8 +1,61 @@
-﻿@{
-    ViewBag.Title = "ホーム ページ";
+﻿@model IEnumerable<Mvc3Depot.Models.Product>
+
+@{
+    Layout = "~/Views/Shared/_DepotLayout.cshtml";
 }
 
-<h2>@ViewBag.Message</h2>
-<p>
-    ASP.NET MVC の詳細については、<a href="http://asp.net/mvc" title="ASP.NET MVC Web サイト">http://asp.net/mvc</a> を参照してください。
+@section additionalJs {
+    <script src="@Url.Content("~/Scripts/jquery.unobtrusive-ajax.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery-ui-1.8.14.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/Depot.js")" type="text/javascript"></script>
+}
+
+@DepotHelper.NoticeArea(TempData["Notice"] as string)
+
+<h2>Your Miskatonic Catalog</h2>
+
+<!--p>
+    @Html.ActionLink("Create New", "Create")
 </p>
+<table>
+    <tr>
+        <th>
+            ImageUrl
+        </th>
+        <th>
+            Title
+        </th>
+        <th>
+            Description
+        </th>
+        <th>
+            Price
+        </th>
+        <th></th>
+    </tr-->
+
+@foreach (var item in Model) {
+    <div class="entry">
+        <img src="/Content@(item.ImageUrl)" alt="@item.Title" />
+        <h3>@Html.DisplayFor(modelItem => item.Title)</h3>
+        <p>@Html.DisplayFor(modelItem => item.Description)</p>
+        <div class="price_line">
+            <span class="price">@Html.DisplayFor(modelItem => item.Price)</span>
+            @using (Ajax.BeginForm("Create", "Cart", new AjaxOptions
+            {
+                UpdateTargetId = "cart",
+                OnBegin = "hideNotice",
+                OnComplete = "blindDownCart",
+                OnSuccess = "highlightCurrentItem"
+            }))
+            {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true)
+                @Html.Hidden("ProductId", item.ProductId)
+                <input type="submit" value="AddToCart" />
+            }
+        </div>
+    </div>
+}
+
+<!--/table-->
