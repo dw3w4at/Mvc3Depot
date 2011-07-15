@@ -20,9 +20,14 @@
 }
 
 @helper NoticeArea(string notice)
+{
+    if ((!string.IsNullOrWhiteSpace(notice)))
     {
-        if ((!string.IsNullOrWhiteSpace(notice)))
-        {
         <p id="notice">@notice</p>
-        }
+    }
+}
+
+@helper PayTypeName(int payTypeValue)
+{
+    @:@Enum.GetName(typeof(Mvc3Depot.Models.PaymentType), payTypeValue)
 }

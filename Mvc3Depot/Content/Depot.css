@@ -22,12 +22,6 @@ tr.product_list:nth-child(even) {
   padding-left: 1em;
 }
 
-#main {
-  margin-left: 17em;
-  padding-top: 4ex;
-  padding-left: 2em;
-}
-
 #main #notice {
         color: #000;
         border: 2px solid red;
@@ -59,64 +53,4 @@ tr.product_list:nth-child(even) {
 #main .entry p {
  margin-top: 0.5em; 
  margin-bottom: 0.8em; 
-}
-
-#main .entry .price_line {
- clear: both;
- margin-bottom: 0.5em;
-}
-
-#main .entry .add_to_cart {
-  position: relative;
-}
-
-#main .entry  .price {
-  color: #44a;
-  font-weight: bold;
-  margin-right: 2em;
-}
-
-#main .entry form, #store .entry form div {
-  display: inline;
-}
-
-#main .cart_title {
-  font: 120% bold;
-}
-
-#main .item_price, #main .total_line {
-  text-align: right;
-}
-
-#main .total_line .total_cell {
-  font-weight: bold;
-  border-top: 1px solid #595;
-}
-
-#side {
-  float: left;
-  padding-top: 1em;
-  padding-left: 1em;
-  padding-bottom: 1em;
-  width: 16em;
-}
-
-#side a {
-  color: #bfb;
-  font-size: small;
-}
-
-#cart, #cart table {
-  font-size: smaller;
-  color: white;
-}
-
-#cart table {
-  border-top:    1px dotted #595;
-  border-bottom: 1px dotted #595;
-  margin-bottom: 10px;
-}
-
-#current_item {
-    background-color: #5c87b2;
 }

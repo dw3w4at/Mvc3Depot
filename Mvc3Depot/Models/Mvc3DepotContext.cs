@@ -11,5 +11,7 @@ namespace Mvc3Depot.Models
         public DbSet<Product> Products { get; set; }
 
         public DbSet<LineItem> LineItems { get; set; }
+
+        public DbSet<Order> Orders { get; set; }
     }
 }

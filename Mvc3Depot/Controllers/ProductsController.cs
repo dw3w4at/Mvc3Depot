@@ -106,6 +106,18 @@ namespace Mvc3Depot.Controllers
             return RedirectToAction("Index");
         }
 
+        //
+        // GET: /Products/WhoBought/5
+
+        public ActionResult WhoBought(int id)
+        {
+            Product product = db.Products.Include(p => p.LineItems.Select(l => l.Order))
+                .Where(p => p.ProductId == id).Single();
+            var orders = product.LineItems.Select(l => l.Order);
+            ViewBag.ProductTitle = product.Title;
+            return View(orders);
+        }
+
         protected override void Dispose(bool disposing)
         {
             db.Dispose();

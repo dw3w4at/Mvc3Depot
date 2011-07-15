@@ -1,0 +1,62 @@
+﻿@model IEnumerable<Mvc3Depot.Models.Order>
+
+<h2>Who bought @ViewBag.ProductTitle</h2>
+
+<table>
+    <tr>
+        <th>
+            OrderId
+        </th>
+        <th>
+            Address
+        </th>
+        <th>
+            Total Quantity & Price
+        </th>
+        <th>
+            PayType
+        </th>
+        <th>
+            Name
+        </th>
+        <th>
+            Email
+        </th>
+    </tr>
+
+@foreach (var item in Model)
+{
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.OrderId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address)
+        </td>
+        <td>
+            <ul>
+            <li>
+                <ol>
+                @foreach (var listItem in item.LineItems)
+                {
+                    <li>Quantity: @Html.DisplayFor(modelItem => listItem.Quantity)
+                    / TotalPrice: @DepotHelper.NumberToCurrency(listItem.TotalPrice())</li>
+                }
+                </ol>
+            </li>
+            <li>@DepotHelper.NumberToCurrency(item.LineItems.Sum(l => l.TotalPrice()))</li>
+            </ul>
+        </td>
+        <td>
+            @DepotHelper.PayTypeName(item.PayType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+    </tr>
+}
+
+</table>

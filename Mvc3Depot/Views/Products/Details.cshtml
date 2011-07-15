@@ -27,5 +27,6 @@
 </fieldset>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id=Model.ProductId }) |
+    @Html.ActionLink("Who bought " + Model.Title, "WhoBought", new { id = Model.ProductId }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

@@ -28,6 +28,7 @@
         </tr>
     </table>
     
+    @Html.ActionLink("Checkout", "Create", "Orders")
     using (Html.BeginForm("Empty", "Cart"))
         {
         @Html.HttpMethodOverride(HttpVerbs.Delete)

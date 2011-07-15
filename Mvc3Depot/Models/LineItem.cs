@@ -14,10 +14,13 @@ namespace Mvc3Depot.Models
         [Required, ScaffoldColumn(false)]
         public Guid CartId { get; set; }
         public int Quantity { get; set; }
+        public int? OrderId { get; set; }
         [Timestamp, ConcurrencyCheck]
         public byte[] Timestamp { get; set; }
 
         public virtual Product Product { get; set; }
+
+        public virtual Order Order { get; set; }
 
         public bool Equals(LineItem other)
         {
