@@ -1,0 +1,28 @@
+﻿@using System.Threading;
+@using System.Data.Entity.Design.PluralizationServices;
+
+@helper Pluralize(int count, string word)
+{
+    if (count == 1)
+    {
+        @:@count @word
+    }
+    else
+    {
+        var p = PluralizationService.CreateService(Thread.CurrentThread.CurrentCulture);
+        @:@count @p.Pluralize(word)
+    }
+}
+
+@helper NumberToCurrency(decimal number)
+{
+    @:@string.Format("{0:C}", number)
+}
+
+@helper NoticeArea(string notice)
+    {
+        if ((!string.IsNullOrWhiteSpace(notice)))
+        {
+        <p id="notice">@notice</p>
+        }
+}

@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using System.Data.Entity;
+using Mvc3Depot.Models;
 
 namespace Mvc3Depot
 {
@@ -32,6 +34,9 @@ namespace Mvc3Depot
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
+
+            // Enable CodeFirst
+            Database.SetInitializer<Mvc3DepotContext>(new Mvc3DepotInitializer());
 
             // Enable Razor only
             ViewEngines.Engines.Clear();
