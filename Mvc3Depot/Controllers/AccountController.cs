@@ -38,7 +38,7 @@ namespace Mvc3Depot.Controllers
                     }
                     else
                     {
-                        return RedirectToAction("Index", "Home");
+                        return RedirectToAction("Index", "Admin");
                     }
                 }
                 else
@@ -58,6 +58,7 @@ namespace Mvc3Depot.Controllers
         {
             FormsAuthentication.SignOut();
 
+            TempData["Notice"] = "Logged out.";
             return RedirectToAction("Index", "Home");
         }
 
@@ -84,7 +85,7 @@ namespace Mvc3Depot.Controllers
                 if (createStatus == MembershipCreateStatus.Success)
                 {
                     FormsAuthentication.SetAuthCookie(model.UserName, false /* createPersistentCookie */);
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Index", "Admin");
                 }
                 else
                 {

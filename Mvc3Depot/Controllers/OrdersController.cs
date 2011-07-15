@@ -17,7 +17,7 @@ namespace Mvc3Depot.Controllers
 
         //
         // GET: /Orders/?page=1
-
+        [Authorize]
         public ViewResult Index(int? page)
         {
             var pageIndex = page ?? 1;

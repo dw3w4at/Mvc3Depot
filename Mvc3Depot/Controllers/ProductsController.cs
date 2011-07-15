@@ -9,6 +9,7 @@ using Mvc3Depot.Models;
 
 namespace Mvc3Depot.Controllers
 {
+    [Authorize]
     public class ProductsController : Controller
     {
         private Mvc3DepotContext db = new Mvc3DepotContext();
