@@ -33,6 +33,10 @@ namespace Mvc3Depot
         {
             AreaRegistration.RegisterAllAreas();
 
+            // Enable Razor only
+            ViewEngines.Engines.Clear();
+            ViewEngines.Engines.Add(new RazorViewEngine());
+
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
         }
