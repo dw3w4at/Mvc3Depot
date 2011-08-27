@@ -38,13 +38,13 @@
       <HintPath>..\packages\EntityFramework.4.1.10715.0\lib\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="PagedList, Version=1.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+    <Reference Include="PagedList, Version=1.10.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\PagedList.1.5.0.0\lib\40\PagedList.dll</HintPath>
+      <HintPath>..\packages\PagedList.1.10\lib\net40\PagedList.dll</HintPath>
     </Reference>
-    <Reference Include="PagedList.Mvc, Version=3.3.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+    <Reference Include="PagedList.Mvc, Version=3.9.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\PagedList.Mvc.3.3.0.0\lib\40\PagedList.Mvc.dll</HintPath>
+      <HintPath>..\packages\PagedList.Mvc.3.9\lib\net40\PagedList.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Data.Entity.Design">
@@ -161,8 +161,8 @@
     <Content Include="Scripts\jquery-1.6.2-vsdoc.js" />
     <Content Include="Scripts\jquery-1.6.2.js" />
     <Content Include="Scripts\jquery-1.6.2.min.js" />
-    <Content Include="Scripts\jquery-ui-1.8.14.js" />
-    <Content Include="Scripts\jquery-ui-1.8.14.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.15.js" />
+    <Content Include="Scripts\jquery-ui-1.8.15.min.js" />
     <Content Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
