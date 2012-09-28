@@ -1,3 +1,6 @@
 Mvc3Depot/bin
 Mvc3Depot/obj
 *.suo
+Backup
+_UpgradeReport_Files
+UpgradeLog.*
